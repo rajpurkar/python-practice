@@ -1,0 +1,7 @@
+name: cs197lec2
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - tqdm
+prefix: /Users/jihun/opt/anaconda3/envs/cs197lec2
