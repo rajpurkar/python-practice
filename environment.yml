@@ -1,0 +1,8 @@
+name: cs197lec2
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - tqdm
+prefix: /Users/davidmeltzer/opt/anaconda3/envs/cs197lec2
