@@ -57,7 +57,7 @@ def test_number_of_ways():
     - 1 -> 0 -> 1 -> 2.
     It can be proven that no other way is possible, so we return 3.
     """
-    print(numberOfWays(1, 2, 3))
+    numberOfWays(1, 2, 3)
 
 if __name__ == "__main__":
     test_number_of_ways()
