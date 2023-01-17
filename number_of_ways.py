@@ -43,6 +43,8 @@ def numberOfWays(startPos: int, endPos: int, k: int) -> int:
             num_ways += 1
     return num_ways
 
+##adding some bs line here
+
 
 def test_number_of_ways():
     """
