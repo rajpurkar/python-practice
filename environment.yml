@@ -1,0 +1,7 @@
+name: cs197
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - tqdm
+prefix: /Users/ethan/opt/anaconda3/envs/cs197
