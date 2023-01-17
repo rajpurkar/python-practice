@@ -40,7 +40,7 @@ def numberOfWays(startPos: int, endPos: int, k: int) -> int:
     num_ways = 0
     for path in paths:
         if path[-1] == endPos:
-            new_ways += 1
+            num_ways += 1
     return num_ways
 
 
