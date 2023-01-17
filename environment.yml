@@ -1,0 +1,6 @@
+name: cs197lec2
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+prefix: C:\Users\17028\.conda\envs\cs197lec2
