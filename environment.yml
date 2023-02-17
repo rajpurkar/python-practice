@@ -1,0 +1,7 @@
+name: cs1971ec2
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - tqdm
+prefix: /Users/tpradeep/miniconda3/envs/cs1971ec2
