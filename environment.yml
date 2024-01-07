@@ -1,0 +1,9 @@
+name: test
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - matplotlib
+  - numpy
+  - ipykernel
+prefix: C:\Users\bdm2k\anaconda3\envs\test
