@@ -10,7 +10,10 @@ def numberOfWays(startPos: int, endPos: int, k: int) -> int:
     Initially, you are standing at position startPos on an infinite
     number line. With one step, you can move either one position to the left,
     or one position to the right.
-    
+              # fix error in new_path_right
+              new_path_right = new_path + [last_position + 1]
+              
+          
     Given a positive integer k, return the number of different ways to
     reach the position endPos starting from startPos, such that you
     perform exactly k steps.
