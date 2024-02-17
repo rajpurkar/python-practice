@@ -1,0 +1,7 @@
+name: py312
+channels:
+  - defaults
+dependencies:
+  - python=3.12
+  - tqdm
+prefix: /home/ad/miniconda3/envs/py312
