@@ -59,5 +59,15 @@ def test_number_of_ways():
     print(number_of_ways(1, 2, 3))
 
 
+def test_number_of_ways_2():
+    """
+    Example 2:
+    Input: startPos = 264, endPos = 198, k = 68
+    Output: 1
+    """
+    print(number_of_ways(264, 198, 68))
+
+
 if __name__ == "__main__":
     test_number_of_ways()
+    test_number_of_ways_2()
