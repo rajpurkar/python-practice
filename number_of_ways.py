@@ -1,6 +1,7 @@
 """Solution for Leetcode Problem:
 Number of Ways to Reach a Position After Exactly k Steps"""
-from tqdm import tqdm
+
+from functools import cache
 
 
 def number_of_ways(start_pos: int, end_pos: int, k: int) -> int:
@@ -13,35 +14,20 @@ def number_of_ways(start_pos: int, end_pos: int, k: int) -> int:
     or one position to the right.
     Given a positive integer k, return the number of different ways to
     reach the position endPos starting from startPos, such that you
-    perform exactly k steps.
+    perform exactly k steps. Since the answer may be very large, return it
+    modulo 109 + 7.
     """
-    # start with path of length 1
-    paths = [[start_pos]]
+    MOD = 10**9+7
+    # define dp[cur_pos][k] = number of ways to reach cur_pos after k steps
+    # dp[cur_pos][k] = dp[cur_pos-1][k-1] + dp[cur_pos+1][k-1]
+    # base case: dp[end_pos][0] = 1
 
-    # loop k times
-    for i in tqdm(range(k)):
-        for _ in range(len(paths)):
-            new_path = paths.pop(0)
-            last_position = new_path[-1]
-
-            # exist fast if not going to make to end
-            if end_pos - last_position > (k - i):
-                continue
-            # path that goes to the left
-            new_path_left = new_path + [last_position - 1]
-
-            # path that goes to the right
-            new_path_right = new_path + [last_position + 1]
-
-            # add paths to the left and right
-            paths.append(new_path_left)
-            paths.append(new_path_right)
-
-    num_ways = 0
-    for path in paths:
-        if path[-1] == end_pos:
-            num_ways += 1
-    return num_ways
+    @cache
+    def dp(cur_pos, k):
+        if k == 0:
+            return 1 if cur_pos == end_pos else 0
+        return (dp(cur_pos-1, k-1) + dp(cur_pos+1, k-1)) % MOD
+    return dp(start_pos, k)
 
 
 def test_number_of_ways():
