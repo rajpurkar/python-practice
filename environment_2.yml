@@ -1,0 +1,7 @@
+name: /opt/miniconda3/envs/cs197lec2
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - tqdm
+prefix: /opt/miniconda3/envs/cs197lec2

@@ -50,7 +50,7 @@ def test_number_of_ways():
 
     Input: startPos = 1, endPos = 2, k = 3
     Output: 3
-    Explanation: We can reach position 2 from 1 in exactly 3 steps
+    Explanation: We can reach position 2 from 1 in exactly 3 
     in three ways:
     - 1 -> 2 -> 3 -> 2.
     - 1 -> 2 -> 1 -> 2.
